@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package calculator;
+
+service PrimeDecomposition {
+  rpc PrimeNumber (PrimeRequest) returns (stream PrimeReply) {}
+}
+
+message PrimeRequest {
+  int32 num = 1;
+}
+
+message PrimeReply {
+  int32 factor = 1;
+}
+
